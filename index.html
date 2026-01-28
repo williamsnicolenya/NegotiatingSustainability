@@ -4,23 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Business, Sustainability & Negotiation</title>
+
   <style>
+    /* ===== Global background ===== */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      margin: 0;
+      min-height: 100vh;
+
+      /* Faded world background */
+      background-image:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("worldmap.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+      color: #eaeaea;
+    }
+
+    /* ===== Page container ===== */
+    .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      color: #222;
     }
 
     h1 {
-      color: #1f7a63;
+      color: #9ee3c8;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      color: #b7f3dc;
       margin-bottom: 10px;
     }
 
     a {
-      color: #1f7a63;
+      color: #9ee3c8;
       text-decoration: none;
       font-weight: bold;
     }
@@ -30,19 +54,24 @@
     }
 
     .section {
-      margin-top: 30px;
+      margin-top: 36px;
     }
 
+    /* ===== Cards ===== */
     .card {
-      border: 1px solid #e7e7e7;
-      border-radius: 12px;
-      padding: 18px;
-      background: #fafafa;
+      border-radius: 14px;
+      padding: 20px;
       margin-top: 16px;
+
+      background: rgba(255, 255, 255, 0.92);
+      color: #222;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
+    /* ===== Venn diagram ===== */
     .venn-wrap {
-      margin-top: 14px;
+      margin-top: 16px;
       display: flex;
       justify-content: center;
     }
@@ -52,10 +81,11 @@
       max-width: 650px;
       height: auto;
       border-radius: 12px;
-      border: 1px solid #e7e7e7;
+      border: 1px solid #ddd;
       background: white;
     }
 
+    /* ===== Buttons ===== */
     .btn-row {
       display: flex;
       flex-wrap: wrap;
@@ -67,7 +97,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 16px;
+      padding: 12px 18px;
       border-radius: 10px;
       border: 2px solid #1f7a63;
       background: #1f7a63;
@@ -75,7 +105,11 @@
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      transition: transform 0.04s ease;
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+    }
+
+    .btn:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
 
     .btn:active {
@@ -96,114 +130,109 @@
 </head>
 
 <body>
-  <h1>Business, Power, and Sustainability</h1>
+  <div class="container">
 
-  <p>
-    One of the biggest drivers of environmental sustainability and the longevity
-    of human existence is business — money, people in power, and systems we often
-    criticize or distrust. Why? Because these are the mechanisms that shape policy,
-    influence behavior, and determine how resources are allocated at scale.
-  </p>
+    <h1>Business, Power, and Sustainability</h1>
 
-  <p>
-    Understanding politics and business go hand in hand, and negotiation is the key.
-    Being smarter — not just working harder — allows individuals and organizations
-    to challenge systems rooted in short-term greed and push toward long-term value.
-  </p>
+    <p>
+      One of the biggest drivers of environmental sustainability and the longevity
+      of human existence is business — money, people in power, and systems we often
+      criticize or distrust. These mechanisms shape policy, influence behavior, and
+      determine how resources are allocated at scale.
+    </p>
 
-  <p>
-    Business sustainability should be consistently practiced across every industry
-    and reinforced by law. Learning how to approach negotiation with an open and
-    strategic mindset can help reduce many of the issues caused by unchecked
-    corporate power.
-  </p>
+    <p>
+      Understanding how politics and business intersect — and how negotiation operates
+      within those systems — allows us to challenge short-term thinking and move toward
+      long-term value creation.
+    </p>
 
-  <p>
-    When we understand both negotiation and sustainable business practices, we can
-    reshape how value is defined — moving from profit-only thinking toward outcomes
-    that benefit people, the planet, and future generations.
-  </p>
+    <p>
+      Business sustainability should be consistently practiced across every industry
+      and reinforced through policy, incentives, and accountability. Strategic
+      negotiation helps turn sustainability from an ideal into an enforceable outcome.
+    </p>
 
-  <div class="section">
-    <h2>📊 The Framework (Venn Diagram)</h2>
-    <div class="card">
-      <p class="small-note">
-        This Venn diagram is part of the base page so the core idea is visible immediately.
-      </p>
+    <p>
+      When negotiation and sustainability work together, value is no longer defined
+      by profit alone — but by outcomes that benefit people, the planet, and future
+      generations.
+    </p>
 
-      <div class="venn-wrap">
-        <!-- Put your image in: assets/venn-diagram.png -->
-        <img
-          class="venn"
-          src="sustainability-business-venn-diagram.webp"
-          alt="Venn diagram showing overlap between business, politics, negotiation, and sustainability"
-        />
-      </div>
+    <!-- Framework Section -->
+    <div class="section">
+      <h2>📊 The Framework (Venn Diagram)</h2>
 
-      <p class="small-note">
-        If your image file name is different, update the <strong>src</strong> path above.
-      </p>
-    </div>
-  </div>
+      <div class="card">
+        <p class="small-note">
+          This framework visualizes how social, economic, and environmental systems
+          overlap to create sustainable outcomes.
+        </p>
 
-  <div class="section">
-    <h2>🎧 Learn More</h2>
-    <div class="card">
-      <p>
-        Listen to this podcast episode for a quick insight into how you can strengthen
-        your approach to ethics, negotiation, and impact:
-      </p>
-
-      <div class="btn-row">
-        <a
-          class="btn"
-          href="https://open.spotify.com/episode/7vgMC7WvzuAPcMU1REaBPZ?si=Y0uB61w_Q_yFX7gO5E7PXA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open Negotiation Podcast
-        </a>
+        <div class="venn-wrap">
+          <img
+            class="venn"
+            src="sustainability-business-venn-diagram.webp"
+            alt="Venn diagram showing overlap between business, politics, negotiation, and sustainability"
+          />
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>🌱 Get Involved in Business Sustainability</h2>
-    <div class="card">
-      <p>
-        Explore ways you can contribute to sustainable business practices:
-      </p>
+    <!-- Learn More -->
+    <div class="section">
+      <h2>🎧 Learn More</h2>
 
-      <ul>
-        <li>
-          <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">
-            United Nations Sustainable Development Goals
+      <div class="card">
+        <p>
+          This podcast offers a quick insight into how negotiation can be used as a tool
+          for ethical decision-making and long-term impact.
+        </p>
+
+        <div class="btn-row">
+          <a
+            class="btn"
+            href="https://open.spotify.com/episode/7vgMC7WvzuAPcMU1REaBPZ?si=Y0uB61w_Q_yFX7gO5E7PXA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Negotiation Podcast
           </a>
-        </li>
-        <li>
-          <a href="https://www.bcorporation.net/" target="_blank" rel="noopener noreferrer">
-            B Corporation – Responsible Business Certification
-          </a>
-        </li>
-        <li>
-          <a href="https://www.weforum.org/topics/sustainability/" target="_blank" rel="noopener noreferrer">
-            World Economic Forum: Sustainability
-          </a>
-        </li>
-      </ul>
-
-      <p class="small-note">
-        Want a deeper read? Use the button below to open the sustainability article page.
-      </p>
-
-      <div class="btn-row">
-        <!-- This goes to a page in your repo -->
-        <a class="btn secondary" href="sustainability.html">
-          Open Sustainable Business Article
-        </a>
+        </div>
       </div>
     </div>
-  </div>
 
+    <!-- Get Involved -->
+    <div class="section">
+      <h2>🌱 Get Involved in Business Sustainability</h2>
+
+      <div class="card">
+        <ul>
+          <li>
+            <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">
+              United Nations Sustainable Development Goals
+            </a>
+          </li>
+          <li>
+            <a href="https://www.bcorporation.net/" target="_blank" rel="noopener noreferrer">
+              B Corporation – Responsible Business Certification
+            </a>
+          </li>
+          <li>
+            <a href="https://www.weforum.org/topics/sustainability/" target="_blank" rel="noopener noreferrer">
+              World Economic Forum: Sustainability
+            </a>
+          </li>
+        </ul>
+
+        <div class="btn-row">
+          <a class="btn secondary" href="sustainability.html">
+            Open Sustainable Business Article
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
