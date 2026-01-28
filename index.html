@@ -6,14 +6,12 @@
   <title>Business, Sustainability & Negotiation</title>
 
   <style>
-    /* ===== Background + base typography ===== */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       min-height: 100vh;
 
-      /* Faded world background */
       background-image:
         radial-gradient(circle at 50% 10%, rgba(0, 190, 255, 0.18), rgba(0,0,0,0) 55%),
         linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
@@ -27,14 +25,12 @@
       color: #eaf7ff;
     }
 
-    /* ===== Page container ===== */
     .container {
       max-width: 940px;
       margin: 46px auto;
       padding: 0 20px 56px;
     }
 
-    /* ===== Headings (futuristic + naturalistic) ===== */
     h1 {
       margin: 0 0 12px;
       color: #bdf6ff;
@@ -49,51 +45,37 @@
       text-shadow: 0 0 16px rgba(50, 255, 200, 0.15);
     }
 
-    p {
-      margin: 0 0 14px;
-      color: #eaf7ff;
-    }
+    p { margin: 0 0 14px; color: #eaf7ff; }
 
     a {
       color: #7fffd4;
       text-decoration: none;
       font-weight: 700;
     }
+    a:hover { text-decoration: underline; }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    .section { margin-top: 34px; }
 
-    .section {
-      margin-top: 34px;
-    }
-
-    /* ===== Glass cards (transparent boxes with cool border) ===== */
+    /* Glass cards */
     .card {
       margin-top: 16px;
       padding: 20px;
 
-      /* transparency */
-      background: rgba(10, 18, 28, 0.38);
-
-      /* cool border */
+      background: rgba(10, 18, 28, 0.30);
       border: 1px solid rgba(140, 255, 230, 0.28);
       border-radius: 16px;
 
-      /* glow + depth */
       box-shadow:
         0 18px 40px rgba(0, 0, 0, 0.40),
         0 0 0 1px rgba(0, 210, 255, 0.08) inset,
         0 0 22px rgba(0, 190, 255, 0.10);
 
-      /* glass effect (supported browsers) */
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       position: relative;
       overflow: hidden;
     }
 
-    /* subtle futuristic "scanline" highlight */
     .card::before {
       content: "";
       position: absolute;
@@ -102,18 +84,15 @@
         linear-gradient(120deg, rgba(0, 255, 200, 0.10), rgba(0, 0, 0, 0) 35%),
         repeating-linear-gradient(
           to bottom,
-          rgba(255,255,255,0.035),
-          rgba(255,255,255,0.035) 1px,
-          rgba(0,0,0,0) 5px,
-          rgba(0,0,0,0) 10px
+          rgba(255,255,255,0.03),
+          rgba(255,255,255,0.03) 1px,
+          rgba(0,0,0,0) 6px,
+          rgba(0,0,0,0) 12px
         );
       opacity: 0.35;
       pointer-events: none;
     }
-
-    .card > * {
-      position: relative; /* keep content above overlay */
-    }
+    .card > * { position: relative; }
 
     .small-note {
       font-size: 0.95rem;
@@ -121,32 +100,28 @@
       margin-top: 10px;
     }
 
-    /* ===== Venn diagram ===== */
+    /* Venn wrapper */
     .venn-wrap {
       margin-top: 16px;
       display: flex;
       justify-content: center;
     }
 
-    .venn {
+    /* Make the SVG scale nicely */
+    .venn-svg {
       width: 100%;
-      max-width: 650px;
+      max-width: 760px;
       height: auto;
-
       border-radius: 14px;
       border: 1px solid rgba(140, 255, 230, 0.22);
-
-      /* slight glow to match theme */
+      background: rgba(255,255,255,0.04);
       box-shadow:
         0 14px 34px rgba(0,0,0,0.45),
         0 0 18px rgba(0, 190, 255, 0.10);
-
-      background: rgba(255,255,255,0.06);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
 
-    /* ===== Buttons ===== */
     .btn-row {
       display: flex;
       flex-wrap: wrap;
@@ -160,13 +135,11 @@
       justify-content: center;
       padding: 12px 18px;
       border-radius: 12px;
-
       border: 1px solid rgba(140, 255, 230, 0.35);
       background: rgba(10, 18, 28, 0.40);
       color: #eaf7ff;
       font-weight: 800;
       letter-spacing: 0.2px;
-
       text-decoration: none;
       cursor: pointer;
 
@@ -187,34 +160,15 @@
         0 0 26px rgba(0, 200, 255, 0.18);
     }
 
-    .btn:active {
-      transform: translateY(1px);
-    }
+    .btn:active { transform: translateY(1px); }
+    .btn.secondary { color: #b8ffe4; border-color: rgba(0, 210, 255, 0.35); }
 
-    .btn.secondary {
-      color: #b8ffe4;
-      border-color: rgba(0, 210, 255, 0.35);
-    }
+    ul { margin: 10px 0 0 20px; padding: 0; color: #eaf7ff; }
+    li { margin: 8px 0; }
 
-    /* ===== Lists readable on glass ===== */
-    ul {
-      margin: 10px 0 0 20px;
-      padding: 0;
-      color: #eaf7ff;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    /* ===== Mobile spacing ===== */
     @media (max-width: 600px) {
-      .container {
-        margin: 28px auto;
-      }
-      .card {
-        padding: 16px;
-      }
+      .container { margin: 28px auto; }
+      .card { padding: 16px; }
     }
   </style>
 </head>
@@ -254,23 +208,140 @@
 
       <div class="card">
         <p class="small-note">
-          This framework visualizes how social, economic, and environmental systems
-          overlap to create sustainable outcomes.
+          A neon-glass Venn diagram showing how sustainability lives in the overlap:
+          people (social), markets (economic), and the planet (environmental).
         </p>
 
         <div class="venn-wrap">
-          <img
-            class="venn"
-            src="sustainability-business-venn-diagram.webp"
-            alt="Venn diagram showing overlap between business, politics, negotiation, and sustainability"
-          />
+          <!-- CUSTOM FUTURISTIC / TRANSPARENT VENN (SVG) -->
+          <svg class="venn-svg" viewBox="0 0 900 520" role="img" aria-label="Sustainability Venn diagram with Social, Economic, and Environmental overlaps">
+            <defs>
+              <!-- soft glow -->
+              <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feColorMatrix in="blur" type="matrix"
+                  values="1 0 0 0 0
+                          0 1 0 0 0
+                          0 0 1 0 0
+                          0 0 0 0.8 0" result="glow" />
+                <feMerge>
+                  <feMergeNode in="glow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+
+              <!-- inner glass highlight -->
+              <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="rgba(255,255,255,0.22)"/>
+                <stop offset="0.45" stop-color="rgba(255,255,255,0.06)"/>
+                <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+              </linearGradient>
+
+              <!-- circle fills (transparent) -->
+              <radialGradient id="cSocial" cx="30%" cy="25%" r="70%">
+                <stop offset="0" stop-color="rgba(0,210,255,0.28)"/>
+                <stop offset="1" stop-color="rgba(0,210,255,0.08)"/>
+              </radialGradient>
+
+              <radialGradient id="cEconomic" cx="70%" cy="25%" r="70%">
+                <stop offset="0" stop-color="rgba(120,255,220,0.26)"/>
+                <stop offset="1" stop-color="rgba(120,255,220,0.08)"/>
+              </radialGradient>
+
+              <radialGradient id="cEnvironmental" cx="50%" cy="75%" r="70%">
+                <stop offset="0" stop-color="rgba(80,200,255,0.22)"/>
+                <stop offset="1" stop-color="rgba(80,200,255,0.07)"/>
+              </radialGradient>
+
+              <!-- neon strokes -->
+              <linearGradient id="strokeBlue" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="rgba(0, 220, 255, 0.95)"/>
+                <stop offset="1" stop-color="rgba(120, 255, 220, 0.85)"/>
+              </linearGradient>
+
+              <!-- center highlight -->
+              <radialGradient id="centerGlow" cx="50%" cy="50%" r="55%">
+                <stop offset="0" stop-color="rgba(170,255,240,0.28)"/>
+                <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+              </radialGradient>
+
+              <!-- text style -->
+              <style>
+                .tTitle { fill: rgba(234,247,255,0.95); font: 800 22px Arial, sans-serif; letter-spacing: .5px; }
+                .tLabel { fill: rgba(234,247,255,0.90); font: 800 18px Arial, sans-serif; }
+                .tSmall { fill: rgba(234,247,255,0.82); font: 14px Arial, sans-serif; }
+                .tTiny  { fill: rgba(234,247,255,0.72); font: 13px Arial, sans-serif; }
+              </style>
+            </defs>
+
+            <!-- subtle backdrop inside the SVG -->
+            <rect x="0" y="0" width="900" height="520" fill="rgba(0,0,0,0.10)"/>
+            <rect x="18" y="18" width="864" height="484" rx="18" fill="rgba(10,18,28,0.18)" stroke="rgba(140,255,230,0.22)"/>
+
+            <!-- circles -->
+            <g filter="url(#glow)">
+              <circle cx="360" cy="235" r="190" fill="url(#cSocial)" stroke="url(#strokeBlue)" stroke-width="2.2" />
+              <circle cx="540" cy="235" r="190" fill="url(#cEconomic)" stroke="url(#strokeBlue)" stroke-width="2.2" />
+              <circle cx="450" cy="350" r="190" fill="url(#cEnvironmental)" stroke="url(#strokeBlue)" stroke-width="2.2" />
+            </g>
+
+            <!-- glass sheen -->
+            <path d="M150,120 C260,40 420,30 520,60 C650,100 740,170 770,240 C650,200 520,190 410,205 C290,220 200,250 130,290 C120,210 120,160 150,120 Z"
+                  fill="url(#glass)" opacity="0.55"/>
+
+            <!-- center glow -->
+            <circle cx="450" cy="285" r="105" fill="url(#centerGlow)" />
+
+            <!-- headings -->
+            <text x="450" y="70" text-anchor="middle" class="tTitle">SUSTAINABILITY</text>
+
+            <!-- circle labels -->
+            <text x="300" y="155" text-anchor="middle" class="tLabel">SOCIAL</text>
+            <text x="600" y="155" text-anchor="middle" class="tLabel">ECONOMIC</text>
+            <text x="450" y="470" text-anchor="middle" class="tLabel">ENVIRONMENTAL</text>
+
+            <!-- Social bullets -->
+            <text x="230" y="185" class="tSmall">Quality of life</text>
+            <text x="230" y="205" class="tSmall">Equity + inclusion</text>
+            <text x="230" y="225" class="tSmall">Community trust</text>
+            <text x="230" y="245" class="tSmall">Labor standards</text>
+
+            <!-- Economic bullets -->
+            <text x="585" y="185" class="tSmall">Smart growth</text>
+            <text x="585" y="205" class="tSmall">Cost savings</text>
+            <text x="585" y="225" class="tSmall">Innovation (R&amp;D)</text>
+            <text x="585" y="245" class="tSmall">Long-range planning</text>
+
+            <!-- Environmental bullets -->
+            <text x="365" y="395" class="tSmall">Resource management</text>
+            <text x="365" y="415" class="tSmall">Protection + restoration</text>
+            <text x="365" y="435" class="tSmall">Waste + emissions</text>
+            <text x="365" y="455" class="tSmall">Resilience planning</text>
+
+            <!-- Overlap labels -->
+            <text x="450" y="210" text-anchor="middle" class="tTiny">Ethics • Fair trade • Governance</text>
+            <text x="385" y="315" text-anchor="middle" class="tTiny">Transparency • Reporting • Accountability</text>
+            <text x="515" y="315" text-anchor="middle" class="tTiny">Efficiency • Incentives • Carbon strategy</text>
+
+            <!-- Center label -->
+            <text x="450" y="292" text-anchor="middle" class="tLabel">NEGOTIATED</text>
+            <text x="450" y="314" text-anchor="middle" class="tLabel">VALUE</text>
+
+            <!-- Footer micro label -->
+            <text x="450" y="505" text-anchor="middle" class="tTiny">
+              Negotiation = turning sustainability into enforceable incentives, contracts, and norms
+            </text>
+          </svg>
         </div>
+
+        <p class="small-note">
+          Want different wording inside the circles? Tell me the exact phrases and I’ll match your class language.
+        </p>
       </div>
     </div>
 
     <div class="section">
       <h2>🎧 Learn More</h2>
-
       <div class="card">
         <p>
           This podcast offers a quick insight into how negotiation can be used as a tool
@@ -292,12 +363,7 @@
 
     <div class="section">
       <h2>🌱 Get Involved in Business Sustainability</h2>
-
       <div class="card">
-        <p>
-          Explore ways you can contribute to sustainable business practices:
-        </p>
-
         <ul>
           <li>
             <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">
@@ -316,10 +382,6 @@
           </li>
         </ul>
 
-        <p class="small-note">
-          Want a deeper read? Use the button below to open the sustainability article page.
-        </p>
-
         <div class="btn-row">
           <a class="btn secondary" href="sustainability.html">
             Open Sustainable Business Article
@@ -331,4 +393,3 @@
   </div>
 </body>
 </html>
-
