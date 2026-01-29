@@ -17,7 +17,7 @@
 
       background-image:
         radial-gradient(circle at 50% 12%, rgba(0,190,255,0.18), rgba(0,0,0,0) 55%),
-        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
         url("worldmap.jpeg");
 
       background-size: cover;
@@ -29,9 +29,62 @@
     }
 
     .container {
-      max-width: 960px;
-      margin: 40px auto 60px;
+      max-width: 980px;
+      margin: 40px auto 70px;
       padding: 0 20px;
+    }
+
+    /* =========================
+       VISUAL DISTINCT ATTRIBUTES
+    ========================== */
+    /* Subtle ambient "aurora" glow */
+    .aurora {
+      position: fixed;
+      inset: -20vh -20vw;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(120,255,220,0.10), rgba(0,0,0,0) 45%),
+        radial-gradient(circle at 80% 30%, rgba(0,220,255,0.10), rgba(0,0,0,0) 50%),
+        radial-gradient(circle at 50% 90%, rgba(120,255,220,0.08), rgba(0,0,0,0) 55%);
+      filter: blur(22px);
+      opacity: 0.9;
+    }
+
+    /* Neon divider */
+    .divider {
+      height: 1px;
+      margin: 22px 0 18px;
+      background: linear-gradient(90deg,
+        rgba(0,0,0,0),
+        rgba(140,255,230,0.55),
+        rgba(0,220,255,0.45),
+        rgba(0,0,0,0)
+      );
+      box-shadow: 0 0 18px rgba(0,200,255,0.12);
+    }
+
+    /* A small “chip” tag style */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(140,255,230,0.28);
+      background: rgba(10,18,28,0.28);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(234,247,255,0.88);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
     }
 
     /* =========================
@@ -40,14 +93,15 @@
     .brand {
       display: flex;
       justify-content: center;
-      margin-bottom: 26px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
     }
 
     .brand-logo {
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
       height: auto;
-
       filter:
         drop-shadow(0 0 18px rgba(0,200,255,0.35))
         drop-shadow(0 0 40px rgba(0,180,255,0.18));
@@ -55,7 +109,7 @@
 
     @media (max-width: 600px) {
       .brand-logo {
-        max-width: 300px;
+        max-width: 310px;
       }
     }
 
@@ -64,19 +118,23 @@
     ========================== */
     h2 {
       color: #b8ffe4;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       text-shadow: 0 0 16px rgba(50,255,200,0.15);
       letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
     }
 
     p {
       margin: 0 0 14px;
       color: #eaf7ff;
+      position: relative;
+      z-index: 1;
     }
 
     a {
       color: #7fffd4;
-      font-weight: 700;
+      font-weight: 800;
       text-decoration: none;
     }
 
@@ -86,6 +144,8 @@
 
     .section {
       margin-top: 36px;
+      position: relative;
+      z-index: 1;
     }
 
     /* =========================
@@ -93,19 +153,19 @@
     ========================== */
     .card {
       margin-top: 16px;
-      padding: 20px;
+      padding: 22px;
       border-radius: 16px;
 
-      background: rgba(10,18,28,0.32);
-      border: 1px solid rgba(140,255,230,0.28);
+      background: rgba(10,18,28,0.28);
+      border: 1px solid rgba(140,255,230,0.30);
 
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
       box-shadow:
-        0 18px 40px rgba(0,0,0,0.4),
-        0 0 0 1px rgba(0,210,255,0.08) inset,
-        0 0 22px rgba(0,190,255,0.10);
+        0 18px 46px rgba(0,0,0,0.42),
+        0 0 0 1px rgba(0,210,255,0.09) inset,
+        0 0 30px rgba(0,190,255,0.12);
 
       position: relative;
       overflow: hidden;
@@ -116,7 +176,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(120deg, rgba(0,255,200,0.10), rgba(0,0,0,0) 35%),
+        linear-gradient(120deg, rgba(0,255,200,0.12), rgba(0,0,0,0) 35%),
         repeating-linear-gradient(
           to bottom,
           rgba(255,255,255,0.03),
@@ -149,19 +209,19 @@
 
     .venn-svg {
       width: 100%;
-      max-width: 760px;
+      max-width: 780px;
       height: auto;
 
       border-radius: 16px;
-      border: 1px solid rgba(140,255,230,0.22);
+      border: 1px solid rgba(140,255,230,0.24);
       background: rgba(255,255,255,0.04);
 
       box-shadow:
-        0 14px 34px rgba(0,0,0,0.45),
-        0 0 18px rgba(0,190,255,0.10);
+        0 14px 38px rgba(0,0,0,0.45),
+        0 0 20px rgba(0,190,255,0.12);
 
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     /* =========================
@@ -175,15 +235,18 @@
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 12px 18px;
       border-radius: 12px;
 
-      border: 1px solid rgba(140,255,230,0.35);
-      background: rgba(10,18,28,0.4);
+      border: 1px solid rgba(140,255,230,0.38);
+      background: rgba(10,18,28,0.40);
       color: #eaf7ff;
 
-      font-weight: 800;
-      letter-spacing: 0.2px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
 
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -192,32 +255,97 @@
         0 10px 24px rgba(0,0,0,0.35),
         0 0 18px rgba(0,190,255,0.12);
 
-      transition: all 0.12s ease;
+      transition: transform 0.08s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
-      border-color: rgba(180,255,240,0.55);
+      border-color: rgba(180,255,240,0.62);
       box-shadow:
-        0 14px 30px rgba(0,0,0,0.42),
-        0 0 26px rgba(0,200,255,0.18);
+        0 14px 34px rgba(0,0,0,0.42),
+        0 0 28px rgba(0,200,255,0.20);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
     }
 
     .btn.secondary {
       color: #b8ffe4;
-      border-color: rgba(0,210,255,0.35);
+      border-color: rgba(0,210,255,0.38);
+    }
+
+    /* Special donation button (slightly brighter) */
+    .btn.donate {
+      border-color: rgba(120,255,220,0.55);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,0.35),
+        0 0 24px rgba(120,255,220,0.18);
+    }
+
+    .btn.donate:hover {
+      border-color: rgba(120,255,220,0.85);
+      box-shadow:
+        0 14px 36px rgba(0,0,0,0.45),
+        0 0 34px rgba(120,255,220,0.26);
     }
 
     ul {
       margin: 10px 0 0 20px;
+      padding: 0;
     }
 
     li {
       margin: 8px 0;
     }
+
+    /* =========================
+       TOGGLE (SHOW/HIDE DONATION INFO)
+    ========================== */
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      user-select: none;
+    }
+
+    .toggle input {
+      width: 20px;
+      height: 20px;
+      accent-color: #7fffd4;
+      cursor: pointer;
+    }
+
+    .toggle label {
+      cursor: pointer;
+      font-weight: 800;
+      color: rgba(234,247,255,0.90);
+    }
+
+    .donate-panel {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(140,255,230,0.24);
+      background: rgba(0,0,0,0.18);
+      display: none;
+    }
+
+    #showDonate:checked ~ .donate-panel {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 18px; }
+      .container { margin: 32px auto 60px; }
+    }
   </style>
 </head>
 
 <body>
+  <div class="aurora"></div>
+
   <div class="container">
 
     <!-- LOGO -->
@@ -225,30 +353,36 @@
       <img src="logo.png" alt="Negotiating Sustainability logo" class="brand-logo">
     </header>
 
+    <div class="chips">
+      <div class="chip">Negotiation</div>
+      <div class="chip">Systems</div>
+      <div class="chip">Policy</div>
+      <div class="chip">Markets</div>
+      <div class="chip">Planet</div>
+    </div>
+
+    <div class="divider"></div>
+
     <!-- INTRO -->
     <p>
-      One of the biggest drivers of environmental sustainability and the longevity of
-      human existence is business — money, people in power, and systems we often
-      criticize or distrust. These mechanisms shape policy, influence behavior, and
-      determine how resources are allocated at scale.
+      One of the biggest drivers of environmental sustainability and the longevity of human existence
+      is business — money, people in power, and systems we often criticize or distrust. These mechanisms
+      shape policy, influence behavior, and determine how resources are allocated at scale.
     </p>
 
     <p>
-      Understanding how politics and business intersect — and how negotiation operates
-      within those systems — allows us to challenge short-term thinking and move toward
-      long-term value creation.
+      Understanding how politics and business intersect — and how negotiation operates within those systems —
+      allows us to challenge short-term thinking and move toward long-term value creation.
     </p>
 
     <p>
-      Business sustainability should be consistently practiced across every industry
-      and reinforced through policy, incentives, and accountability. Strategic
-      negotiation turns sustainability from an ideal into an enforceable outcome.
+      Business sustainability should be consistently practiced across every industry and reinforced through policy,
+      incentives, and accountability. Strategic negotiation turns sustainability from an ideal into an enforceable outcome.
     </p>
 
     <p>
-      When negotiation and sustainability work together, value is no longer defined by
-      profit alone — but by outcomes that benefit people, the planet, and future
-      generations.
+      When negotiation and sustainability work together, value is no longer defined by profit alone — but by outcomes that benefit
+      people, the planet, and future generations.
     </p>
 
     <!-- FRAMEWORK -->
@@ -257,47 +391,93 @@
 
       <div class="card">
         <p class="small-note">
-          Sustainability lives in the overlap — negotiated through social systems,
-          economic markets, and environmental boundaries.
+          Sustainability lives in the overlap — negotiated through social systems, economic markets,
+          and environmental boundaries.
         </p>
 
         <div class="venn-wrap">
-          <!-- INLINE FUTURISTIC VENN -->
           <svg class="venn-svg" viewBox="0 0 900 520" aria-label="Sustainability Venn Diagram">
             <defs>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="6" />
+              <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
               </filter>
 
-              <radialGradient id="blue">
-                <stop offset="0" stop-color="rgba(0,220,255,0.28)" />
-                <stop offset="1" stop-color="rgba(0,220,255,0.08)" />
+              <linearGradient id="strokeNeon" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="rgba(0,220,255,0.95)"/>
+                <stop offset="1" stop-color="rgba(120,255,220,0.85)"/>
+              </linearGradient>
+
+              <radialGradient id="cSocial" cx="30%" cy="25%" r="70%">
+                <stop offset="0" stop-color="rgba(0,210,255,0.26)"/>
+                <stop offset="1" stop-color="rgba(0,210,255,0.08)"/>
               </radialGradient>
 
-              <radialGradient id="green">
-                <stop offset="0" stop-color="rgba(120,255,220,0.26)" />
-                <stop offset="1" stop-color="rgba(120,255,220,0.08)" />
+              <radialGradient id="cEconomic" cx="70%" cy="25%" r="70%">
+                <stop offset="0" stop-color="rgba(120,255,220,0.24)"/>
+                <stop offset="1" stop-color="rgba(120,255,220,0.08)"/>
               </radialGradient>
 
-              <radialGradient id="teal">
-                <stop offset="0" stop-color="rgba(80,200,255,0.24)" />
-                <stop offset="1" stop-color="rgba(80,200,255,0.08)" />
+              <radialGradient id="cEnvironmental" cx="50%" cy="75%" r="70%">
+                <stop offset="0" stop-color="rgba(80,200,255,0.22)"/>
+                <stop offset="1" stop-color="rgba(80,200,255,0.07)"/>
               </radialGradient>
             </defs>
 
-            <circle cx="360" cy="240" r="190" fill="url(#blue)" filter="url(#glow)" />
-            <circle cx="540" cy="240" r="190" fill="url(#green)" filter="url(#glow)" />
-            <circle cx="450" cy="360" r="190" fill="url(#teal)" filter="url(#glow)" />
+            <!-- backdrop frame -->
+            <rect x="18" y="18" width="864" height="484" rx="18"
+              fill="rgba(10,18,28,0.18)" stroke="rgba(140,255,230,0.22)"/>
 
-            <text x="450" y="60" fill="#eaf7ff" font-size="22" font-weight="800" text-anchor="middle">
+            <!-- circles -->
+            <g filter="url(#glow)">
+              <circle cx="360" cy="240" r="190" fill="url(#cSocial)" stroke="url(#strokeNeon)" stroke-width="2.2" />
+              <circle cx="540" cy="240" r="190" fill="url(#cEconomic)" stroke="url(#strokeNeon)" stroke-width="2.2" />
+              <circle cx="450" cy="360" r="190" fill="url(#cEnvironmental)" stroke="url(#strokeNeon)" stroke-width="2.2" />
+            </g>
+
+            <!-- labels -->
+            <text x="450" y="70" fill="rgba(234,247,255,0.95)" font-size="22" font-weight="800" text-anchor="middle">
               SUSTAINABILITY
             </text>
 
-            <text x="300" y="170" fill="#eaf7ff" font-weight="700">SOCIAL</text>
-            <text x="580" y="170" fill="#eaf7ff" font-weight="700">ECONOMIC</text>
-            <text x="430" y="480" fill="#eaf7ff" font-weight="700">ENVIRONMENTAL</text>
+            <text x="300" y="170" fill="rgba(234,247,255,0.90)" font-size="18" font-weight="800">SOCIAL</text>
+            <text x="580" y="170" fill="rgba(234,247,255,0.90)" font-size="18" font-weight="800">ECONOMIC</text>
+            <text x="405" y="480" fill="rgba(234,247,255,0.90)" font-size="18" font-weight="800">ENVIRONMENTAL</text>
 
-            <text x="450" y="300" fill="#eaf7ff" font-weight="800" text-anchor="middle">
+            <!-- bullets -->
+            <text x="250" y="205" fill="rgba(234,247,255,0.82)" font-size="14">Quality of life</text>
+            <text x="250" y="225" fill="rgba(234,247,255,0.82)" font-size="14">Equity + inclusion</text>
+            <text x="250" y="245" fill="rgba(234,247,255,0.82)" font-size="14">Community trust</text>
+            <text x="250" y="265" fill="rgba(234,247,255,0.82)" font-size="14">Labor standards</text>
+
+            <text x="610" y="205" fill="rgba(234,247,255,0.82)" font-size="14">Smart growth</text>
+            <text x="610" y="225" fill="rgba(234,247,255,0.82)" font-size="14">Cost savings</text>
+            <text x="610" y="245" fill="rgba(234,247,255,0.82)" font-size="14">Innovation (R&amp;D)</text>
+            <text x="610" y="265" fill="rgba(234,247,255,0.82)" font-size="14">Long-range planning</text>
+
+            <text x="330" y="405" fill="rgba(234,247,255,0.82)" font-size="14">Resource management</text>
+            <text x="330" y="425" fill="rgba(234,247,255,0.82)" font-size="14">Protection + restoration</text>
+            <text x="330" y="445" fill="rgba(234,247,255,0.82)" font-size="14">Waste + emissions</text>
+            <text x="330" y="465" fill="rgba(234,247,255,0.82)" font-size="14">Resilience planning</text>
+
+            <!-- overlap labels -->
+            <text x="450" y="235" fill="rgba(234,247,255,0.72)" font-size="13" text-anchor="middle">
+              Ethics • Fair trade • Governance
+            </text>
+
+            <text x="395" y="325" fill="rgba(234,247,255,0.72)" font-size="13" text-anchor="middle">
+              Transparency • Reporting • Accountability
+            </text>
+
+            <text x="515" y="325" fill="rgba(234,247,255,0.72)" font-size="13" text-anchor="middle">
+              Efficiency • Incentives • Carbon strategy
+            </text>
+
+            <!-- center -->
+            <text x="450" y="308" fill="rgba(234,247,255,0.95)" font-size="18" font-weight="900" text-anchor="middle">
               NEGOTIATED VALUE
             </text>
           </svg>
@@ -311,33 +491,89 @@
 
       <div class="card">
         <p>
-          This podcast explores how negotiation can be used as a tool for ethical
-          decision-making and long-term impact.
+          This podcast explores how negotiation can be used as a tool for ethical decision-making and long-term impact.
         </p>
 
         <div class="btn-row">
-          <a class="btn" href="https://open.spotify.com/episode/7vgMC7WvzuAPcMU1REaBPZ" target="_blank">
+          <a
+            class="btn"
+            href="https://open.spotify.com/episode/7vgMC7WvzuAPcMU1REaBPZ?si=Y0uB61w_Q_yFX7gO5E7PXA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Open Negotiation Podcast
           </a>
         </div>
       </div>
     </div>
 
-    <!-- RESOURCES -->
+    <!-- RESOURCES + DONATION -->
     <div class="section">
       <h2>🌱 Get Involved in Business Sustainability</h2>
 
       <div class="card">
         <ul>
-          <li><a href="https://sdgs.un.org/goals" target="_blank">UN Sustainable Development Goals</a></li>
-          <li><a href="https://www.bcorporation.net/" target="_blank">B Corporation</a></li>
-          <li><a href="https://www.weforum.org/topics/sustainability/" target="_blank">World Economic Forum</a></li>
+          <li>
+            <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">
+              UN Sustainable Development Goals
+            </a>
+          </li>
+          <li>
+            <a href="https://www.bcorporation.net/" target="_blank" rel="noopener noreferrer">
+              B Corporation – Responsible Business Certification
+            </a>
+          </li>
+          <li>
+            <a href="https://www.weforum.org/topics/sustainability/" target="_blank" rel="noopener noreferrer">
+              World Economic Forum: Sustainability
+            </a>
+          </li>
         </ul>
+
+        <p class="small-note">
+          Want a deeper read? Use the button below to open the sustainability article page.
+        </p>
 
         <div class="btn-row">
           <a class="btn secondary" href="sustainability.html">
             Open Sustainable Business Article
           </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Donation line + toggle -->
+        <p>
+          If you care for more sustainable research development, here’s where you can go to donate and support the work.
+        </p>
+
+        <!-- Toggle checkbox -->
+        <div class="toggle">
+          <input type="checkbox" id="showDonate" />
+          <label for="showDonate">Show donation option</label>
+        </div>
+
+        <!-- Panel revealed by toggle -->
+        <div class="donate-panel">
+          <p class="small-note">
+            Donations help fund sustainability research and development—supporting innovation, education, and solutions that scale.
+          </p>
+
+          <div class="btn-row">
+            <!-- Replace this link with YOUR preferred donation link -->
+            <a
+              class="btn donate"
+              href="https://www.unfoundation.org/what-we-do/issues/climate-and-environment/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate to Sustainability R&amp;D
+            </a>
+          </div>
+
+          <p class="small-note">
+            Tip: If you already have a specific organization or fundraiser, swap the URL in the button.
+          </p>
         </div>
       </div>
     </div>
@@ -345,5 +581,6 @@
   </div>
 </body>
 </html>
+
 
 
